@@ -17,6 +17,9 @@ public class TextTransformerController {
 
     @PostMapping
     public String transform(@RequestBody TransformTextRequest request) {
+        if (request.getText() == null || request.getTransformations() == null) {
+            return "Invalid request";
+        }
         return this.textTransformer.transform(request.getText(), request.getTransformations());
         //TODO verify transformations
 
