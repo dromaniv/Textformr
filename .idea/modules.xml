@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Textformr.iml" filepath="$PROJECT_DIR$/.idea/Textformr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ioprojectarchitecture/io-project-architecture.iml" filepath="$PROJECT_DIR$/ioprojectarchitecture/io-project-architecture.iml" />
     </modules>
   </component>
 </project>
