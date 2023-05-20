@@ -4,6 +4,9 @@ import pl.put.poznan.transformer.logic.Decorator;
 import pl.put.poznan.transformer.logic.AbstractTransformer;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Class used to invert the input text
  */
@@ -16,32 +19,25 @@ public class Inverter extends Decorator {
 
     @Override
     public String transform(String input) {
-        //inverter should preserve the position of upper and lower case letters
-        //split the input into letters
-        String[] letters = input.split("");
-        //create a list of positions of upper case letters
-        int[] upperCasePositions = new int[letters.length];
-        int upperCaseCount = 0;
-        for (int i = 0; i < letters.length; i++) {
-            if (letters[i].equals(letters[i].toUpperCase())) {
-                upperCasePositions[upperCaseCount] = i;
-                upperCaseCount++;
+        List pos = WhereUpperCase(input);
+        String lower_input = input.toLowerCase();
+        //reverse the string
+        String reverse = new StringBuffer(lower_input).reverse().toString();
+        //change the case of the letters
+        char[] ch = reverse.toCharArray();
+        for (int i = 0; i < pos.size(); i++) {
+            ch[(int) pos.get(i)] = Character.toUpperCase(ch[(int) pos.get(i)]);
+        }
+        return new String(ch);
+    }
+
+    private List WhereUpperCase(String input) {
+        List<Integer> pos = new ArrayList<Integer>();
+        for (int i = 0; i < input.length(); i++) {
+            if (Character.isUpperCase(input.charAt(i))) {
+                pos.add(i);
             }
         }
-        //lower case all letters
-        for (int i = 0; i < letters.length; i++) {
-            letters[i] = letters[i].toLowerCase();
-        }
-        //reverse the order of letters
-        for (int i = 0; i < letters.length / 2; i++) {
-            String temp = letters[i];
-            letters[i] = letters[letters.length - i - 1];
-            letters[letters.length - i - 1] = temp;
-        }
-        //upper case letters in their original positions
-        for (int i = 0; i < upperCaseCount; i++) {
-            letters[upperCasePositions[i]] = letters[upperCasePositions[i]].toUpperCase();
-        }
-        return input;
+        return pos;
     }
 }

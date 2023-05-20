@@ -1,90 +1,74 @@
 package pl.put.poznan.transformer.logic.decorators;
 
-import java.util.HashMap;
-import java.util.Map;
+import pl.put.poznan.transformer.logic.AbstractTransformer;
+import pl.put.poznan.transformer.logic.Decorator;
 
-public class NumberConverter {
-    private static final Map<Integer, String> NUMBERS = new HashMap<>();
+public class NumberConverter extends Decorator {
 
-    static {
-        NUMBERS.put(0, "zero");
-        NUMBERS.put(1, "one");
-        NUMBERS.put(2, "two");
-        NUMBERS.put(3, "three");
-        NUMBERS.put(4, "four");
-        NUMBERS.put(5, "five");
-        NUMBERS.put(6, "six");
-        NUMBERS.put(7, "seven");
-        NUMBERS.put(8, "eight");
-        NUMBERS.put(9, "nine");
-        NUMBERS.put(10, "ten");
-        NUMBERS.put(11, "eleven");
-        NUMBERS.put(12, "twelve");
-        NUMBERS.put(13, "thirteen");
-        NUMBERS.put(14, "fourteen");
-        NUMBERS.put(15, "fifteen");
-        NUMBERS.put(16, "sixteen");
-        NUMBERS.put(17, "seventeen");
-        NUMBERS.put(18, "eighteen");
-        NUMBERS.put(19, "nineteen");
-        NUMBERS.put(20, "twenty");
-        NUMBERS.put(30, "thirty");
-        NUMBERS.put(40, "forty");
-        NUMBERS.put(50, "fifty");
-        NUMBERS.put(60, "sixty");
-        NUMBERS.put(70, "seventy");
-        NUMBERS.put(80, "eighty");
-        NUMBERS.put(90, "ninety");
+    private static final String[] units = {
+            "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+            "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+    };
+
+    private static final String[] tens = {
+            "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
+    };
+
+    public NumberConverter(AbstractTransformer transformer) {
+        super(transformer);
     }
 
-    public static String convertNumberToText(int number) {
+    @Override
+    public String transform(String input) {
+        String[] words = input.split(" ");
+        String output = "";
+        for (int i = 0; i < words.length; i++) {
+            output+=" ";
+            try {
+                int number = Integer.parseInt(words[i]);
+                output+=(convertNumberToText(number));
+            } catch (NumberFormatException e) {
+                output+=words[i];
+            }
+        }
+        return output;
+    }
+
+    private String convertNumberToText(int number) {
         if (number < 0) {
             return "minus " + convertNumberToText(-number);
         }
-
+        if (number == 0) {
+            return "zero";
+        }
         if (number < 100) {
             return convertLessThan100(number);
         }
-
         if (number < 1000) {
             return convertLessThan1000(number);
         }
-
-        return convertGreaterThanOrEqualTo1000(number);
+        return convertEqualTo1000(number);
     }
 
-    private static String convertLessThan100(int number) {
-        if (NUMBERS.containsKey(number)) {
-            return NUMBERS.get(number);
+    private String convertLessThan100(int number) {
+        if (number < 20) {
+            return units[number];
         }
-
-        int tens = (number / 10) * 10;
-        int ones = number % 10;
-
-        return NUMBERS.get(tens) + "-" + NUMBERS.get(ones);
+        int unit = number % 10;
+        int ten = number / 10;
+        return tens[ten] + (unit != 0 ? " " + units[unit] : "");
     }
 
-    private static String convertLessThan1000(int number) {
-        int hundreds = number / 100;
-        int remainder = number % 100;
-
-        String text = NUMBERS.get(hundreds) + " hundred";
-        if (remainder != 0) {
-            text += " " + convertLessThan100(remainder);
-        }
-
-        return text;
+    private String convertLessThan1000(int number) {
+        int hundred = number / 100;
+        int rest = number % 100;
+        return units[hundred] + " hundred" + (rest != 0 ? " and " + convertLessThan100(rest) : "");
     }
 
-    private static String convertGreaterThanOrEqualTo1000(int number) {
-        int thousands = number / 1000;
-        int remainder = number % 1000;
-
-        String text = convertLessThan1000(thousands) + " thousand";
-        if (remainder != 0) {
-            text += " " + convertLessThan1000(remainder);
-        }
-
-        return text;
+    private String convertEqualTo1000(int number) {
+        if (number == 1000)
+            return "one thousand";
+        System.out.println("ERROR: Convertion of numbers greater than 1000 is not supported");
+        return "ERROR:NUMBER_TOO_BIG";
     }
 }
