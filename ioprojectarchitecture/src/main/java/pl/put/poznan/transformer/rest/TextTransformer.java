@@ -1,10 +1,7 @@
 package pl.put.poznan.transformer.rest;
 
 import org.springframework.stereotype.Service;
-import pl.put.poznan.transformer.logic.decorators.CapitalizeTransformer;
-import pl.put.poznan.transformer.logic.decorators.Inverter;
-import pl.put.poznan.transformer.logic.decorators.LowerCaseTransformer;
-import pl.put.poznan.transformer.logic.decorators.UpperCaseTransformer;
+import pl.put.poznan.transformer.logic.decorators.*;
 
 import java.util.List;
 
@@ -38,6 +35,12 @@ public class TextTransformer {
                     break;
                 case "invert":
                     input = new Inverter(input1 -> input1).transform(input);
+                    break;
+                case "convert numbers":
+                    input = new NumberConverter(input1 -> input1).transform(input);
+                    break;
+                case "eliminate duplicates":
+                    input = new DuplicatesEliminator(input1 -> input1).transform(input);
                     break;
                 default:
                     break;
