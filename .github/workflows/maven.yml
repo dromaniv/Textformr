@@ -32,7 +32,7 @@ jobs:
     - name: Move files to staging directory
       run: |
         mkdir ioprojectarchitecture/staging 
-        cp ioprojectarchitecture/target/*.jar ioprojectarchitecture/staging/package 
+        cp ioprojectarchitecture/target/*.jar ioprojectarchitecture/staging/package/textformr.jar 
         cp -r ioprojectarchitecture/target/site/apidocs ioprojectarchitecture/staging/javadoc
     - uses: actions/upload-artifact@v3
       with:
