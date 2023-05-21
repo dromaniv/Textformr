@@ -29,18 +29,16 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file ioprojectarchitecture/pom.xml
-    - name: Generate Javadoc
-      run: mvn -B javadoc:javadoc --file ioprojectarchitecture/pom.xml
     - name: Move files to staging directory
       run: |
         mkdir staging 
-        cp target/*.jar staging 
-        cp -r target/site/apidocs staging/javadoc
+        cp ioprojectarchitecture/target/*.jar staging 
+        cp -r ioprojectarchitecture/target/site/apidocs ioprojectarchitecture/staging/javadoc
     - uses: actions/upload-artifact@v3
       with:
         name: Package
-        path: staging
+        path: ioprojectarchitecture/staging
     - uses: actions/upload-artifact@v3
       with:
         name: Javadoc
-        path: staging/javadoc
+        path: ioprojectarchitecture/staging/javadoc
