@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Textformr CI pipeline
 
 on:
   push:
@@ -36,9 +36,9 @@ jobs:
         cp -r ioprojectarchitecture/target/site/apidocs ioprojectarchitecture/staging/javadoc
     - uses: actions/upload-artifact@v3
       with:
-        name: Package
+        name: Textformr JAR
         path: ioprojectarchitecture/staging
     - uses: actions/upload-artifact@v3
       with:
-        name: Javadoc
+        name: Textformr Documentation
         path: ioprojectarchitecture/staging/javadoc
