@@ -31,8 +31,8 @@ jobs:
       run: mvn -B package --file ioprojectarchitecture/pom.xml
     - name: Move files to staging directory
       run: |
-        mkdir staging 
-        cp ioprojectarchitecture/target/*.jar staging 
+        mkdir ioprojectarchitecture/staging 
+        cp ioprojectarchitecture/target/*.jar ioprojectarchitecture/staging 
         cp -r ioprojectarchitecture/target/site/apidocs ioprojectarchitecture/staging/javadoc
     - uses: actions/upload-artifact@v3
       with:
