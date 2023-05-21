@@ -42,6 +42,15 @@ public class TextTransformer {
                 case "eliminate duplicates":
                     input = new DuplicatesEliminator(input1 -> input1).transform(input);
                     break;
+                case "make acronyms":
+                    input = new MakeAcronyms(input1 -> input1).transform(input);
+                    break;
+                case "expand acronyms":
+                    input = new ExpandAcronyms(input1 -> input1).transform(input);
+                    break;
+                case "latex":
+                    input = new LatexTransformer(input1 -> input1).transform(input);
+                    break;
                 default:
                     break;
 
