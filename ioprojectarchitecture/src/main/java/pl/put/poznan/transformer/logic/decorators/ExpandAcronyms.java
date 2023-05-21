@@ -6,6 +6,10 @@ import pl.put.poznan.transformer.logic.Decorator;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class used to expand acronyms in the text.
+ * It extends Decorator class.
+ */
 public class ExpandAcronyms extends Decorator {
     private static final Map<String, String> EXPANSIONS;
 
@@ -17,10 +21,19 @@ public class ExpandAcronyms extends Decorator {
         EXPANSIONS.put("aso", "and so on");
     }
 
+    /**
+     * Constructor of ExpandAcronyms class.
+     * @param transformer AbstractTransformer object to be decorated.
+     */
     public ExpandAcronyms(AbstractTransformer transformer) {
         super(transformer);
     }
 
+    /**
+     * Method used to expand acronyms in the text.
+     * @param input String to be transformed.
+     * @return String with expanded acronyms.
+     */
     @Override
     public String transform(String input) {
         String[] words = super.transform(input).split(" ");
