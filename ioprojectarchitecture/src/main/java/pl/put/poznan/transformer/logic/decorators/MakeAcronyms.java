@@ -6,6 +6,10 @@ import pl.put.poznan.transformer.logic.Decorator;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class used to make acronyms in the text.
+ * It extends Decorator class.
+ */
 public class MakeAcronyms extends Decorator {
     private static final Map<String, String> ACRONYMS;
 
@@ -16,10 +20,19 @@ public class MakeAcronyms extends Decorator {
         ACRONYMS.put("and so on", "aso");
     }
 
+    /**
+     * Constructor of MakeAcronyms class.
+     * @param transformer AbstractTransformer object to be decorated.
+     */
     public MakeAcronyms(AbstractTransformer transformer) {
         super(transformer);
     }
 
+    /**
+     * Method used to make acronyms in the text.
+     * @param input String to be transformed.
+     * @return String with made acronyms.
+     */
     @Override
     public String transform(String input) {
         String output = super.transform(input);
