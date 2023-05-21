@@ -3,6 +3,9 @@ package pl.put.poznan.transformer.logic.decorators;
 import pl.put.poznan.transformer.logic.AbstractTransformer;
 import pl.put.poznan.transformer.logic.Decorator;
 
+/**
+ * Class used to transform numbers to text
+ */
 public class NumberConverter extends Decorator {
 
     private static final String[] units = {
@@ -14,10 +17,19 @@ public class NumberConverter extends Decorator {
             "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
     };
 
+    /**
+     * Constructor of NumberConverter class
+     * @param transformer transformer to be decorated
+     */
     public NumberConverter(AbstractTransformer transformer) {
         super(transformer);
     }
 
+    /**
+     * Method used to transform numbers to text
+     * @param input input string
+     * @return string with numbers transformed to text
+     */
     @Override
     public String transform(String input) {
         String[] words = input.split(" ");

@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Required;
 
 import java.util.List;
 
+/**
+ * This class is responsible for instructing the transformers to transform the text
+ * uses lower case but all the request preprocessing is done in the controller
+ */
 public class TransformTextRequest {
     private String text;
 
