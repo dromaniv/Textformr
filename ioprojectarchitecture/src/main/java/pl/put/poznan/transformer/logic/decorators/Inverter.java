@@ -13,10 +13,19 @@ import java.util.List;
 @Service
 public class Inverter extends Decorator {
 
+    /**
+     * Constructor of the class
+     * @param transformer - the transformer to be decorated
+     */
     public Inverter(AbstractTransformer transformer) {
         super(transformer);
     }
 
+    /**
+     * Method used to invert the input text
+     * @param input - input string
+     * @return inverted string
+     */
     @Override
     public String transform(String input) {
         List pos = WhereUpperCase(input);
@@ -30,6 +39,12 @@ public class Inverter extends Decorator {
         }
         return new String(ch);
     }
+
+    /**
+     * Method used to find the positions of the upper case letters
+     * @param input - input string
+     * @return list of positions of the upper case letters
+     */
 
     private List WhereUpperCase(String input) {
         List<Integer> pos = new ArrayList<Integer>();
