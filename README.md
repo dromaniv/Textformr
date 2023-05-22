@@ -1,3 +1,4 @@
+![Version](https://img.shields.io/badge/version-0.2-blue.svg) \
 ![Textformr CI pipeline](https://github.com/Dmytro-Romaniv/Textformr/actions/workflows/maven.yml/badge.svg)
 
 # Textformr
