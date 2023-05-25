@@ -1,7 +1,7 @@
 body {
     background-color: #f7f1e3; /* Off-white background */
     font-family: "Courier New", monospace; /* Monospace font for a retro feel */
-    margin: 0;
+    margin: 24px;
     padding: 20px;
 }
 
@@ -28,7 +28,7 @@ label {
 }
 
 textarea, input[type="text"], input[type="submit"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -80,6 +80,7 @@ input[type="submit"]:hover {
 .queue {
     margin-top: 10px;
     min-height: 50px;
+    min-width: 90%;
     border: 2px dashed #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -116,4 +117,19 @@ input[type="submit"]:hover {
 
 .clear-button:focus {
   outline: none;
+}
+
+
+#queue-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#clearQueueButton {
+    margin-left: 10px; /* Add margin to the left of the clear queue button */
+}
+
+.fa-times {
+    /* Styles for the cross icon */
 }
