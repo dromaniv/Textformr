@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Textformr</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div id="content">
+    <h1>Textformr</h1>
+    <form id="transformForm">
+        <div class = "center">
+            <label for="text">Text:</label><br>
+            <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+        </div>
+
+        <div id="transformations-container", class="center">
+            <p>Transformations:</p>
+            <div class="bricks">
+                <div class="brick" draggable="true">Uppercase</div>
+                <div class="brick" draggable="true">Lowercase</div>
+                <div class="brick" draggable="true">Capitalize</div>
+                <div class="brick" draggable="true">Invert</div>
+                <div class="brick" draggable="true">Convert Numbers</div>
+                <div class="brick" draggable="true">Eliminate Duplicates</div>
+                <div class="brick" draggable="true">Make Acronyms</div>
+                <div class="brick" draggable="true">Expand Acronyms</div>
+                <div class="brick" draggable="true">LaTeX</div>
+            </div>
+        </div>
+
+        <div class="center">
+            <label for="queue">Transformation Queue:</label>
+            <div id="queue-container" class="center">
+                <div id="queue" class="queue" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<!--                <input type="submit" value="Transform">-->
+                <div class="center">
+                    <button id="clearQueueButton" type="button" class="clear-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="center"><input type="submit" value="Transform"></div>
+
+        </div>
+    </form>
+    <div class="center">
+        <h2>Result:</h2>
+        <p id="result"></p>
+    </div>
+</div>
+<script src="script.js"></script>
+<script src="drop.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+<script>
+$(function() {
+    $("#queue").sortable(); // Enable sorting for the transformation queue
+});
+</script>
+</body>
+</html>

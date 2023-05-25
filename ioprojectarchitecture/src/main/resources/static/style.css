@@ -1,0 +1,137 @@
+body {
+    background-color: #f7f1e3; /* Off-white background */
+    font-family: "Courier New", monospace; /* Monospace font for a retro feel */
+    padding: 20px;
+}
+
+#content {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: normal;
+    color: #555;
+}
+
+label {
+    display: block;
+    color: #555;
+}
+
+textarea, input[type="text"], input[type="submit"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Courier New", monospace; /* Monospace font for input fields */
+    background-color: #f7f1e3; /* Off-white background */
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #555;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px 0;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+#result {
+    margin-top: 20px;
+    width: 95%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f7f1e3; /* Off-white background */
+    font-family: "Courier New", monospace; /* Monospace font for the result */
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.brick {
+    display: inline-block;
+    margin-right: 10px;
+    margin-up: 10px;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: move;
+}
+
+.center{
+    margin: auto;
+    width: 98%;
+    padding: 10px;
+}
+
+.brick.selected {
+    background-color: #555;
+    color: #fff;
+}
+
+.queue {
+    margin-top: 10px;
+    margin-right: 10px;
+    min-height: 50px;
+    min-width: 80%;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.queue .brick {
+    margin: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: default;
+}
+
+.queue .brick:hover {
+    background-color: #f7f1e3;
+}
+
+.clear-button {
+  background-color: #FE4A49;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: #BA2D0B;
+}
+
+.clear-button:focus {
+  outline: none;
+}
+
+
+#queue-container {
+    display: flex;
+    align-items: center;
+}
+
+#clearQueueButton {
+    margin-left: 10px; /* Add margin to the left of the clear queue button */
+}
