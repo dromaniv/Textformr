@@ -1,7 +1,6 @@
 body {
     background-color: #f7f1e3; /* Off-white background */
     font-family: "Courier New", monospace; /* Monospace font for a retro feel */
-    margin: 24px;
     padding: 20px;
 }
 
@@ -23,7 +22,6 @@ h1, h2 {
 
 label {
     display: block;
-    margin-top: 10px;
     color: #555;
 }
 
@@ -43,6 +41,7 @@ textarea {
 input[type="submit"] {
     background-color: #555;
     color: #fff;
+    width: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: 10px 0;
@@ -54,6 +53,7 @@ input[type="submit"]:hover {
 
 #result {
     margin-top: 20px;
+    width: 95%;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -62,14 +62,20 @@ input[type="submit"]:hover {
     white-space: pre-wrap; /* Preserve line breaks */
 }
 
-/* Additional styles specific to the HTML structure */
 .brick {
     display: inline-block;
     margin-right: 10px;
+    margin-up: 10px;
     padding: 5px;
     background-color: #ccc;
     border-radius: 5px;
     cursor: move;
+}
+
+.center{
+    margin: auto;
+    width: 98%;
+    padding: 10px;
 }
 
 .brick.selected {
@@ -79,8 +85,9 @@ input[type="submit"]:hover {
 
 .queue {
     margin-top: 10px;
+    margin-right: 10px;
     min-height: 50px;
-    min-width: 90%;
+    min-width: 80%;
     border: 2px dashed #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -98,7 +105,7 @@ input[type="submit"]:hover {
 }
 
 .clear-button {
-  background-color: #8661C1;
+  background-color: #FE4A49;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -112,7 +119,7 @@ input[type="submit"]:hover {
 }
 
 .clear-button:hover {
-  background-color: #2c164d;
+  background-color: #BA2D0B;
 }
 
 .clear-button:focus {
@@ -123,13 +130,8 @@ input[type="submit"]:hover {
 #queue-container {
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 #clearQueueButton {
     margin-left: 10px; /* Add margin to the left of the clear queue button */
-}
-
-.fa-times {
-    /* Styles for the cross icon */
 }
