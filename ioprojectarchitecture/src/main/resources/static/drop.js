@@ -23,9 +23,15 @@ function drop(event) {
     var brick = document.createElement('div');
     brick.className = 'brick';
     brick.textContent = transformation;
+    brick.addEventListener('click', function(event) {
+        removeFromQueue(event.target);
+    });
     queue.appendChild(brick);
 }
 
+function removeFromQueue(brick) {
+    brick.remove();
+}
 
 var clearQueueButton = document.getElementById('clearQueueButton');
 clearQueueButton.addEventListener('click', function() {
