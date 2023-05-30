@@ -11,10 +11,6 @@ bricks.forEach(function(brick) {
     brick.addEventListener('dragend', function(event) {
         event.target.classList.remove('selected');
     });
-
-    brick.addEventListener('click', function(event) {
-        removeFromQueue(event.target);
-    });
 });
 
 function allowDrop(event) {
@@ -34,10 +30,7 @@ function drop(event) {
 }
 
 function removeFromQueue(brick) {
-    var queue = document.getElementById('queue');
-    if (queue.contains(brick)) {
-        queue.removeChild(brick);
-    }
+    brick.remove();
 }
 
 var clearQueueButton = document.getElementById('clearQueueButton');
