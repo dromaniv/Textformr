@@ -12,7 +12,7 @@ document.getElementById('transformForm').addEventListener('submit', function(eve
         transformations: transformations
     };
 
-    fetch('http://localhost:8080/transform', {
+    fetch('/transform', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
