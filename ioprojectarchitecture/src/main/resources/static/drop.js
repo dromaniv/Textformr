@@ -11,6 +11,10 @@ bricks.forEach(function(brick) {
     brick.addEventListener('dragend', function(event) {
         event.target.classList.remove('selected');
     });
+
+    brick.addEventListener('click', function(event) {
+        removeFromQueue(event.target);
+    });
 });
 
 function allowDrop(event) {
@@ -23,9 +27,18 @@ function drop(event) {
     var brick = document.createElement('div');
     brick.className = 'brick';
     brick.textContent = transformation;
+    brick.addEventListener('click', function(event) {
+        removeFromQueue(event.target);
+    });
     queue.appendChild(brick);
 }
 
+function removeFromQueue(brick) {
+    var queue = document.getElementById('queue');
+    if (queue.contains(brick)) {
+        queue.removeChild(brick);
+    }
+}
 
 var clearQueueButton = document.getElementById('clearQueueButton');
 clearQueueButton.addEventListener('click', function() {
