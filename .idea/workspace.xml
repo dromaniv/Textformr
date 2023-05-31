@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da994a8f-6724-4259-9d9a-c9431587d2ba" name="Changes" comment="DuplicatesEliminator module added. Tested.">
-      <change afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/DuplicatesEliminator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="da994a8f-6724-4259-9d9a-c9431587d2ba" name="Changes" comment="Adding '0' case to NumberConverter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/io-project-architecture.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/EliminateRepetitionTransformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/Inverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/Inverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/NumberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/NumberConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/rest/TextTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/rest/TextTransformer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +46,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/samue/Desktop/Uni/4th semester/Software Engineering/Textformr&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/macie/Desktop/accounts-jetty"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TextTransformerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.put.poznan.transformer.app.TextTransformerApplication" />
@@ -84,7 +77,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7e79bfd1-6ea0-4de0-956e-99c2a1bffeb2" name="Changes" comment="" />
+      <changelist id="da994a8f-6724-4259-9d9a-c9431587d2ba" name="Changes" comment="Adding '0' case to NumberConverter" />
       <created>1684347212093</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -111,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684352250168</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding '0' case to NumberConverter">
+      <created>1684605464023</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684605464023</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +132,7 @@
     <MESSAGE value="Inverter module added. Tested." />
     <MESSAGE value="NumberConverter module added. Tested." />
     <MESSAGE value="DuplicatesEliminator module added. Tested." />
-    <option name="LAST_COMMIT_MESSAGE" value="DuplicatesEliminator module added. Tested." />
+    <MESSAGE value="Adding '0' case to NumberConverter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding '0' case to NumberConverter" />
   </component>
 </project>
