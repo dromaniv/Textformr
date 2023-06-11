@@ -46,9 +46,9 @@ public class ExpandAcronyms extends Decorator {
                     word = word.substring(0, 1).toUpperCase() + word.substring(1);
                 }
             }
-            result += word + " ";
+            result += word + " "; //Why the space
         }
 
-        return result;
+        return result.trim();
     }
 }

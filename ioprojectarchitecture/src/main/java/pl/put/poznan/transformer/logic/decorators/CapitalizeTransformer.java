@@ -24,6 +24,9 @@ public class CapitalizeTransformer extends Decorator{
     @Override
     public String transform(String input) {
         String[] words = input.split("\\s+");
+        if (words.length == 0) {
+            return input;
+        }
         for (int i = 0; i < words.length; i++) {
             words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substring(1).toLowerCase();
         }
