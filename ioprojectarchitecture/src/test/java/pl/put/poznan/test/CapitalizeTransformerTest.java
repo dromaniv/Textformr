@@ -30,6 +30,5 @@ class CapitalizeTransformerTest {
         assertEquals(" ", capitalizeTransformer.transform(" "));
         assertEquals("A B C D E", capitalizeTransformer.transform("a b c d e"));
         assertEquals("@hello World!", capitalizeTransformer.transform("@hello world!"));
-        //assertEquals("", capitalizeTransformer.transform("")); //TODO: fix this test
     }
 }

@@ -22,7 +22,6 @@ public class TextTransformer {
 
     public String transform(String input, List<String> transformations) {
         for (String transformation : transformations) {
-            //TODO: This is a toy example, we will refactor it with the Decorator pattern
             switch (transformation) {
                 case "uppercase":
                     input = new UpperCaseTransformer(input1 -> input1).transform(input);

@@ -33,7 +33,5 @@ public class TextTransformerController {
             return "Invalid request";
         }
         return this.textTransformer.transform(request.getText(), request.getTransformations());
-        //TODO verify transformations
-
     }
 }
