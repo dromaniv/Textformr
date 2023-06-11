@@ -6,6 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="da994a8f-6724-4259-9d9a-c9431587d2ba" name="Changes" comment="Adding '0' case to NumberConverter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/CapitalizeTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/CapitalizeTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/ExpandAcronyms.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/ExpandAcronyms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/LatexTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/decorators/LatexTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/CapitalizeTransformerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/CapitalizeTransformerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/DuplicatesEliminatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/DuplicatesEliminatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/ExpandAcronymsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/ExpandAcronymsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/InverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/InverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/LatexTransformerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/LatexTransformerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/LowerCaseTransformerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/LowerCaseTransformerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/MakeAcronymsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/MakeAcronymsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/NumberConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/NumberConverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/UpperCaseTransformerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture/src/test/java/pl/put/poznan/test/UpperCaseTransformerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +29,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -46,31 +59,115 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/macie/Desktop/accounts-jetty"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/macie/Desktop/studia_kochane/sem4/se/project/Textformr/ioprojectarchitecture/src/test&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="TextTransformerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.transformer.app.TextTransformerApplication" />
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\macie\Desktop\studia_kochane\sem4\se\project\Textformr\ioprojectarchitecture\src\test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="pl.put.poznan.test" />
+      <recent name="pl.put.poznan.transformer.test" />
+      <recent name="pl.put.poznan.transformer.logic.decorators" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UpperCaseTransformerTest.testTransform">
+    <configuration name="MakeAcronymsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="io-project-architecture" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.put.poznan.transformer.app.*" />
+          <option name="PATTERN" value="pl.put.poznan.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.test" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.test.MakeAcronymsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="io-project-architecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.test" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.test.NumberConverterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberConverterTest.testTransform" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="io-project-architecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.test" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.test.NumberConverterTest" />
+      <option name="METHOD_NAME" value="testTransform" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpperCaseTransformerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="io-project-architecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.test" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.test.UpperCaseTransformerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpperCaseTransformerTest.testTransform" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="io-project-architecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.test" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.test.UpperCaseTransformerTest" />
+      <option name="METHOD_NAME" value="testTransform" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TextTransformerApplication" />
+        <item itemvalue="JUnit.UpperCaseTransformerTest.testTransform" />
+        <item itemvalue="JUnit.UpperCaseTransformerTest" />
+        <item itemvalue="JUnit.NumberConverterTest" />
+        <item itemvalue="JUnit.NumberConverterTest.testTransform" />
+        <item itemvalue="JUnit.MakeAcronymsTest" />
       </list>
     </recent_temporary>
   </component>
